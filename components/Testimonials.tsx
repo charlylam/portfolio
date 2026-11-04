@@ -4,7 +4,7 @@ import SectionHeading from "./SectionHeading";
 export default function Testimonials() {
   return (
     <section id="avis" className="mx-auto max-w-5xl px-6 py-20">
-      <SectionHeading index="04" title="Ce que l'on dit de moi" />
+      <SectionHeading index="04" title="Avis" />
       <div className="mt-10 grid gap-6 sm:grid-cols-2">
         {testimonials.map((t) => (
           <figure

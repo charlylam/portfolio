@@ -17,18 +17,21 @@ export default function Skills() {
 
       <div className="mt-12">
         <SubHeading title="Hard skills" caption="Technologies, outils et méthodes" />
-        <div className="mt-5 divide-y divide-neutral-800 rounded-xl border border-neutral-800 bg-neutral-900/60">
+        <div className="mt-5 divide-y divide-neutral-700 rounded-xl border border-neutral-700 bg-neutral-800/70">
           {hardSkills.map((group) => (
             <div
               key={group.category}
               className="grid gap-3 px-6 py-5 md:grid-cols-[9rem_1fr] md:items-baseline"
             >
-              <h4 className="text-sm font-medium text-accent">{group.category}</h4>
+              <h4 className="flex items-center gap-2 text-base font-semibold text-white">
+  <span aria-hidden className="h-4 w-1 rounded-full bg-accent" />
+  {group.category}
+</h4>
               <ul className="flex flex-wrap gap-2">
                 {group.items.map((item) => (
                   <li
                     key={item}
-                    className="rounded-full border border-neutral-700 bg-neutral-800/60 px-3 py-1 text-sm text-neutral-200"
+                    className="rounded-full border border-neutral-600 bg-neutral-900/60 px-3 py-1 text-sm text-neutral-200"
                   >
                     {item}
                   </li>
@@ -45,11 +48,11 @@ export default function Skills() {
           {softSkills.map((skill) => (
             <div
               key={skill.label}
-              className="rounded-xl border border-neutral-800 bg-neutral-900/60 p-6"
+              className="rounded-xl border border-neutral-700 bg-neutral-800/70 p-6"
             >
               <span className="block h-0.5 w-8 bg-accent" />
               <p className="mt-4 font-semibold text-white">{skill.label}</p>
-              <p className="mt-2 text-sm leading-relaxed text-neutral-400">
+              <p className="mt-2 text-sm leading-relaxed text-neutral-300">
                 {skill.detail}
               </p>
             </div>
