@@ -1,18 +1,12 @@
 import Image from "next/image";
 import type { Project } from "@/data/projects";
+import ImageCarousel from "./ImageCarousel";
 
 export default function ProjectCard({ project }: { project: Project }) {
-  const [cover, ...others] = project.images;
 
   return (
     <article className="overflow-hidden rounded-xl border border-neutral-200 bg-white text-neutral-900 shadow-sm">
-      <Image
-        src={cover}
-        alt={`Capture de ${project.title}`}
-        width={1600}
-        height={840}
-        className="w-full border-b border-neutral-200"
-      />
+    <ImageCarousel images={project.images} title={project.title} />
 
       <div className="space-y-6 p-6 sm:p-8">
         <header>
@@ -50,21 +44,6 @@ export default function ProjectCard({ project }: { project: Project }) {
             </li>
           ))}
         </ul>
-
-        {others.length > 0 && (
-          <div className="grid grid-cols-2 gap-3">
-            {others.map((src) => (
-              <Image
-                key={src}
-                src={src}
-                alt={`Capture de ${project.title}`}
-                width={800}
-                height={420}
-                className="w-full rounded border border-neutral-200"
-              />
-            ))}
-          </div>
-        )}
 
         <div className="flex gap-4">
           {project.liveUrl && (

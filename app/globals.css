@@ -32,3 +32,34 @@ section[id] {
 @theme {
   --color-accent: #b98a52;
 }
+
+@keyframes bg-sweep {
+  from { mask-position: 0% 0; -webkit-mask-position: 0% 0; }
+  to   { mask-position: 100% 0; -webkit-mask-position: 100% 0; }
+}
+
+.bg-wood,
+.bg-code {
+  mask-size: 300% 100%;
+  -webkit-mask-size: 300% 100%;
+  animation: bg-sweep 26s ease-in-out infinite alternate;
+}
+.bg-wood {
+  mask-image: linear-gradient(90deg, #000 0%, #000 33%, transparent 50%, transparent 100%);
+  -webkit-mask-image: linear-gradient(90deg, #000 0%, #000 33%, transparent 50%, transparent 100%);
+}
+.bg-code {
+  mask-image: linear-gradient(90deg, transparent 0%, transparent 33%, #000 50%, #000 100%);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, transparent 33%, #000 50%, #000 100%);
+}
+
+/* Écrans réduits ou préférence « réduire les animations » : image fixe,
+   bois à gauche et code à droite */
+@media (prefers-reduced-motion: reduce), (max-width: 767px) {
+  .bg-wood,
+  .bg-code {
+    animation: none;
+    mask-position: 35% 0;
+    -webkit-mask-position: 35% 0;
+  }
+}

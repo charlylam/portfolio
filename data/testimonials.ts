@@ -15,18 +15,18 @@ export const testimonials: Testimonial[] = [
     quote:
       "Merci à toi Charly, merci pour ton travail et ta rigueur, tu es un super élément pour une entreprise.",
     author: "Flavie V",
-    role: "Chef de projet, agence web",
+    role: "Chef de projet, agence web - LinkedIn",
   },
   {
     quote:
       "Merci Charly pour cette période de stage, merci pour ton engagement, je te souhaite une belle réussite.",
     author: "Maxime A",
-    role: "Directeur d'exploitation, agence web",
+    role: "Directeur d'exploitation, agence web - LinkedIn",
   },
   {
     quote:
       "C'est vraiment une aventure la reconversion, surtout quand on suit une formation intensive. Tu n'as rien lâché.",
     author: "Virginie L",
-    role: "Tutrice pédagogique, École O'clock",
+    role: "Tutrice pédagogique, École O'clock - LinkedIn",
   },
 ];
